@@ -1,9 +1,9 @@
 /*  
 	Description:		This program is a text-based, menu-driven game entitled "Property Property". It revolves around the actions of 2 players switching
-						turns, and rolling a 6-sided virtual dice in order to move around a board with 10 blocks. Depending on the block they landed on,
-						the player can choose to buy, renovate, sell, pay or do nothing. The game ends when a player's cash plunges into the
-						negative due to not affording rent with no properties left to sell. After this, the menu is displayed, and the player may choose
-						to exit the program or start another game. The program closes only when the option [ EXIT GAME ] is chosen.						
+				turns, and rolling a 6-sided virtual dice in order to move around a board with 10 blocks. Depending on the block they landed on,
+				the player can choose to buy, renovate, sell, pay or do nothing. The game ends when a player's cash plunges into the
+				negative due to not affording rent with no properties left to sell. After this, the menu is displayed, and the player may choose
+				to exit the program or start another game. The program closes only when the option [ EXIT GAME ] is chosen.						
 	Acknowledgements:	https://www.youtube.com/watch?v=oXEDMNXzuo4			
 */
 
@@ -12,26 +12,26 @@
 #include "functions.c"
 
 #define   GO				 0
-#define   ELECTRIC_COMPANY 	 2
-#define   JAIL_TIME 		 4
-#define   FEELIN_LUCKY 		 6
+#define   ELECTRIC_COMPANY 	 	 2
+#define   JAIL_TIME 			 4
+#define   FEELIN_LUCKY 		 	 6
 #define   RAILROAD 			 7	
 
 int main()
 {
 	int nStartOrEndGame;				// 1 for start, 2 for end
-	int nDice;							// number rolled by the dice
+	int nDice;					// number rolled by the dice
 	int nPlayer1 = 1;
 	int nPlayer2 = 2;
 	int nPropertyStatus;				// tracks status of properties via a 9-digit integer
-	int nPosition1;						// player 1's position on the board
-	int nPosition2;						// player 2's position on the board
-	int nTurnCounter;					// signals the program to switch turns
+	int nPosition1;					// player 1's position on the board
+	int nPosition2;					// player 2's position on the board
+	int nTurnCounter;				// signals the program to switch turns
 	int nJailCounter1 = 0;				// jail loop counter of player 1
 	int nJailCounter2 = 0;				// jail loop counter of player 2
 	int nGameCounter = 0;				// game counter: odd = game is ongoing, even = game is done
-	float fCash1;						// player 1's total cash
-	float fCash2;						// player 2's total cast
+	float fCash1;					// player 1's total cash
+	float fCash2;					// player 2's total cast
 	float fGoBonus;	
 	float fRenovationCost;
 		
